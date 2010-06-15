@@ -134,6 +134,14 @@ module Saroetsy
           self.auth = TWITTER_OAUTH_SPEC.merge(auth)
         end
       end
+      
+      #Rosario, putting api_key in here for Etsy
+      if options.has_key(:api_key)
+        self.auth.merge!({:type=>:basic,:api_key=>options[:api_key]})
+      end
+      
+      
+      
     end
                
     def method_missing(name,*args,&block)
