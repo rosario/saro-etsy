@@ -1,4 +1,4 @@
-module Grackle
+module Saroetsy
   module Utils
     
     VALID_PROFILE_IMAGE_SIZES = [:bigger,:normal,:mini]

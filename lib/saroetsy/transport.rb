@@ -1,4 +1,4 @@
-module Grackle
+module Saroetsy
   
   class Response #:nodoc:
     attr_accessor :method, :request_uri, :status, :body

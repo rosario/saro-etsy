@@ -1,4 +1,4 @@
-module Grackle
+module Saroetsy
   
   #Returned by methods which retrieve data from the API
   class TwitterStruct < OpenStruct

@@ -1,4 +1,4 @@
-module Grackle
+module Saroetsy
 
   # :stopdoc:
   VERSION = '0.1.10'
@@ -25,7 +25,7 @@ require 'oauth'
 require 'oauth/client'
 require 'mime/types'
 
-require 'grackle/utils'
-require 'grackle/transport'
-require 'grackle/handlers'
-require 'grackle/client'
+require 'saroetsy/utils'
+require 'saroetsy/transport'
+require 'saroetsy/handlers'
+require 'saroetsy/client'
