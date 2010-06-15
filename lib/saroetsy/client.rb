@@ -135,11 +135,10 @@ module Saroetsy
         end
       end
       
-      self.api_key = {}
       #Rosario, putting api_key in here for Etsy
-      if options.has_key?(:api_key)
-        self.api_key.merge!({:api_key=>options[:api_key]})
-      end
+      # if options.has_key?(:api_key)
+      #        self.api_key.merge!({:api_key=>options[:api_key]})
+      #      end
       
       
       
