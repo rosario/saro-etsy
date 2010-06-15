@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.date = %q{2010-6-13}
   s.description = %q{Grackle is a lightweight library for the Twitter REST and Search API.}
   s.email = %q{test@test.it}
-  s.files = ["saro-etsy.gemspec", "lib/grackle.rb", "lib/grackle/client.rb", "lib/grackle/handlers.rb", "lib/grackle/transport.rb", "lib/grackle/utils.rb", "test/test_grackle.rb", "test/test_helper.rb", "test/test_client.rb", "test/test_handlers.rb"]
+  s.files = ["saroetsy.gemspec", "lib/saroetsy.rb", "lib/saroetsy/client.rb", "lib/saroetsy/handlers.rb", "lib/saroetsy/transport.rb", "lib/saroetsy/utils.rb", "test/test_saroetsy.rb", "test/test_helper.rb", "test/test_client.rb", "test/test_handlers.rb"]
   s.has_rdoc = true
   s.rdoc_options = ["--inline-source", "--charset=UTF-8","--main=README.rdoc"]
   s.require_paths = ["lib"]
