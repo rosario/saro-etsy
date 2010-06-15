@@ -136,7 +136,7 @@ module Saroetsy
       end
       
       #Rosario, putting api_key in here for Etsy
-      if options.has_key(:api_key)
+      if options.has_key?(:api_key)
         self.auth.merge!({:type=>:basic,:api_key=>options[:api_key]})
       end
       
