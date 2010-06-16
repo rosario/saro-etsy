@@ -34,6 +34,7 @@ module Saroetsy
     # - :timeout - timeout for the http request in seconds
     def request(method, string_url, options={})
       params = stringify_params(options[:params])
+      puts "INSIDE REQUEST #{params.inspect}"
       if method == :get && params
         string_url << query_string(params)
       end
