@@ -238,10 +238,7 @@ module Saroetsy
         if api_key
           request.params.merge!(:api_key => api_key)
         end
-        
-        
-        puts "SEND_REQUEST #{request.params.inspect}"
-        
+                
         
         begin
           http_method = (
