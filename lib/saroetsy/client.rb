@@ -243,7 +243,7 @@ module Saroetsy
           transport.request(
             http_method, request.url,
             :auth=>auth,:headers=>headers,
-            :params=>request.params,:timeout => timeout
+            :params=>request.params,:timeout => timeout, :api_key => api_key
           )
         rescue => e
           puts e
