@@ -238,6 +238,7 @@ module Saroetsy
           http_method = (
             request.params.delete(:__method) or request.method or :get
           )
+          puts "Inside send_request #{api_key} ////"
           transport.request(
             http_method, request.url,
             :auth=>auth,:headers=>headers,
