@@ -135,11 +135,9 @@ module Saroetsy
         end
       end
       
-      self.api_key = {}
       # Rosario, putting api_key in here for Etsy
       if options.has_key?(:api_key)
          self.api_key = options[:api_key]
-         self.request.params.merge!(:api_key => options[:api_key])
       end
       
       
@@ -237,7 +235,14 @@ module Saroetsy
       
       def send_request
         
-        puts "SEND_REQUEST #{api_key.inspect}"
+        if api_key
+          request.params.merge!(:api_key => api_key)
+        end
+        
+        
+        puts "SEND_REQUEST #{request.params.inspect}"
+        
+        
         begin
           http_method = (
             request.params.delete(:__method) or request.method or :get
@@ -245,7 +250,7 @@ module Saroetsy
           transport.request(
             http_method, request.url,
             :auth=>auth,:headers=>headers,
-            :params=>request.params,:timeout => timeout, :api_key => api_key
+            :params=>request.params,:timeout => timeout
           )
         rescue => e
           puts e
