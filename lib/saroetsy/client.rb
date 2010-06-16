@@ -98,7 +98,7 @@ module Saroetsy
     }
     
     attr_accessor :auth, :handlers, :default_format, :headers, :ssl, :api, 
-      :transport, :request, :api_hosts, :timeout, :auto_append_ids
+      :transport, :request, :api_hosts, :timeout, :auto_append_ids, :api_key
     
     # Arguments (all are optional):
     # - :username       - twitter username to authenticate with (deprecated in favor of :auth arg)
@@ -135,8 +135,10 @@ module Saroetsy
         end
       end
       
+      self.api_key = {}
       # Rosario, putting api_key in here for Etsy
       if options.has_key?(:api_key)
+         self.api_key = options[:api_key]
          self.request.params.merge!(:api_key => options[:api_key])
       end
       
