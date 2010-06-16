@@ -236,6 +236,8 @@ module Saroetsy
       end
       
       def send_request
+        
+        puts "SEND_REQUEST #{api_key.inspect}"
         begin
           http_method = (
             request.params.delete(:__method) or request.method or :get
